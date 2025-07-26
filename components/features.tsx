@@ -1,5 +1,6 @@
 import { Code2, Headset, Workflow } from "lucide-react"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 const features = [
   { icon: <Code2 className="w-7 h-7 text-primary" />, title: "Custom Integrations", desc: "Tailored automations to connect your favorite tools." },
@@ -21,9 +22,9 @@ export default function Features() {
             </div>
           ))}
         </div>
-        <a href="/features">
+        <Link href="/features">
           <Button className="mt-12 font-bold" size="lg">Learn More</Button>
-        </a>
+        </Link>
       </div>
     </section>
   )

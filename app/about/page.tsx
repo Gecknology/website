@@ -2,6 +2,7 @@
 import React from "react";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function AboutPage() {
   const [showMore, setShowMore] = React.useState(false);
@@ -23,9 +24,9 @@ export default function AboutPage() {
 
       {/* Overlay 2: Meet the Founder */}
       <div className="py-18 px-6 flex flex-col items-center">
-        <h2 className="text-3xl font-semibold mb-12">Meet <span className="font-semibold text-primary">Gecknology's</span> Founder</h2>
+        <h2 className="text-3xl font-semibold mb-12">Meet <span className="font-semibold text-primary">Gecknology&#39;s</span> Founder</h2>
         <div className="flex-shrink-0 w-60 h-60 rounded-full overflow-hidden border-2 border-muted-foreground mb-8 shadow-lg">
-          <img src="/profile.jpg" alt="Founder Profile" className="object-cover w-full h-full" />
+          <Image src="/profile.jpg" alt="Founder Profile" width={240} height={240} className="object-cover w-full h-full" />
         </div>
         <div className="text-lg text-muted-foreground text-center mb-4">
           <h3 className="font-semibold text-2xl">Hello there!</h3>
@@ -47,7 +48,7 @@ export default function AboutPage() {
           >
             <div className="text-lg text-muted-foreground">
               <p className="mb-4">
-                Hi, I'm Sean, the founder of Gecknology. Much of my career was in the nonprofit sector, where I saw firsthand how technology can empower organizations to do more good, or can be the biggest barrier to success.
+                Hi, I&#39;m Sean, the founder of Gecknology. Much of my career was in the nonprofit sector, where I saw firsthand how technology can empower organizations to do more good, or can be the biggest barrier to success.
               </p>
               <p>
                 Now with the experience of a seasoned Solutions Architect, my aim is to enable nonprofits to maximize their impact through technology.

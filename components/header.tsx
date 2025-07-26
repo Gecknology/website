@@ -7,27 +7,31 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 import { useConversationalForm } from "@/components/ConversationalFormContext";
+import Link from "next/link";
 
 export default function Header() {
   const { openForm } = useConversationalForm();
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 grid grid-cols-2 md:grid-cols-3 items-center py-4 px-6 bg-foreground relative">
-      <a href="/" className="text-2xl font-bold justify-self-start text-primary flex items-center gap-2">
-        <img
+      <Link href="/" className="text-2xl font-bold justify-self-start text-primary flex items-center gap-2">
+        <Image
           src="/Gecknology_logo.png"
           alt="Gecknology Logo"
+          width={32}
+          height={32}
           className="h-[1em] w-auto align-middle"
           style={{ display: "inline-block" }}
         />
-          <h1 className="font-body">Gecknology</h1>
-      </a>
+        <h1 className="font-body">Gecknology</h1>
+      </Link>
       {/* Desktop nav */}
       <nav className="hidden md:flex gap-6 text-med font-bold justify-self-center">
-      <a href="/features" className="text-primary hover:underline hover:text-accent">Features</a>
-      <a href="/about" className="text-primary hover:underline hover:text-accent">About</a>
-      <a href="/contact" className="text-primary hover:underline hover:text-accent">Contact</a>
+      <Link href="/features" className="text-primary hover:underline hover:text-accent">Features</Link>
+      <Link href="/about" className="text-primary hover:underline hover:text-accent">About</Link>
+      <Link href="/contact" className="text-primary hover:underline hover:text-accent">Contact</Link>
       </nav>
       {/* Mobile navigation-menu dropdown */}
       <div className="md:hidden justify-self-end">

@@ -52,7 +52,7 @@ export default function ContactPage() {
       </div>
       {/* Contact form */}
       <div className="max-w-lg mx-auto mt-12 p-6 bg-foreground rounded-xl shadow-lg">
-        <h4 className="text-lg text-muted-foreground text-center mb-4">We'd love to hear from you! <br /> Please fill out the form below.</h4>
+        <h4 className="text-lg text-muted-foreground text-center mb-4">We&#39;d love to hear from you! <br /> Please fill out the form below.</h4>
         <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="block mb-1 font-medium">Name</label>

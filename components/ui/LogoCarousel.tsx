@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 
 interface LogoCarouselProps {
   size?: number;
@@ -70,13 +71,13 @@ const LogoCarousel: React.FC<LogoCarouselProps> = ({ size = 8 }) => {
           transition={rowWidth ? { repeat: Infinity, repeatType: "loop", duration: 30, ease: "linear" } : {}}
         >
           {allLogos.map((logo, idx) => (
-            <img
+            <Image
               key={idx + logo.src}
               src={logo.src}
               alt={logo.alt}
-              style={{ height: `${size * 4}px`, width: `${size * 4}px` }}
-              onLoad={() => setImagesLoaded((count) => count + 1)}
-              onError={() => setImagesLoaded((count) => count + 1)}
+              width={64}
+              height={64}
+              className="mx-2"
             />
           ))}
         </motion.div>

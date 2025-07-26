@@ -154,7 +154,7 @@ export default function ConversationalForm({
               </div>
             ) : submitError ? (
               <div className="p-6 text-xl text-primary-foreground text-center w-full">
-                We're sorry, there was an issue with your submission. Please try again later.
+                We&#39;re sorry, there was an issue with your submission. Please try again later.
               </div>
             ) : (
               <>
