@@ -75,8 +75,8 @@ const LogoCarousel: React.FC<LogoCarouselProps> = ({ size = 8 }) => {
               key={idx + logo.src}
               src={logo.src}
               alt={logo.alt}
-              width={64}
-              height={64}
+              width={80}
+              height={80}
               className="mx-2"
             />
           ))}

@@ -43,7 +43,7 @@ export default function ConversationalForm({
   onClose?: () => void;
 }) {
   const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<any>({});
+  const [answers, setAnswers] = useState<Record<string, unknown>>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
@@ -63,7 +63,7 @@ export default function ConversationalForm({
 
   // Handle input for text and options
   const handleInput = (value: string | string[]) => {
-    setAnswers((prev: any) => ({ ...prev, [current.id]: value }));
+    setAnswers((prev: Record<string, unknown>) => ({ ...prev, [current.id]: value }));
     // Only advance step if not last question
     if (step < questions.length - 1) {
       setStep((s) => s + 1);
@@ -77,12 +77,6 @@ export default function ConversationalForm({
         : [...prev, option]
     );
   };
-  const handleMultiSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (multiSelect.length > 0) {
-      handleInput(multiSelect);
-    }
-  };
 
   // Honeypot field state
   const [honeypot, setHoneypot] = useState("");
@@ -93,7 +87,7 @@ export default function ConversationalForm({
   const handleSubmit = async () => {
     setSubmitting(true);
     // Ensure the last input is included in answers
-    let finalAnswers = { ...answers };
+    const finalAnswers = { ...answers };
     if (current.type === "text" || current.type === "multiline") {
       finalAnswers[current.id] = inputValue;
     } else if (current.type === "multi-options") {
