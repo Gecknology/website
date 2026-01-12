@@ -4,6 +4,11 @@ import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+export const metadata = {
+  title: "About - Gecknology",
+  description: "Learn more about Gecknology and our founder's passion for helping nonprofits succeed."
+};
+
 export default function AboutPage() {
   const [showMore, setShowMore] = React.useState(false);
   return (
