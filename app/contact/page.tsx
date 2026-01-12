@@ -5,11 +5,6 @@ import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-export const metadata = {
-  title: "Contact Us - Gecknology",
-  description: "Get in touch with Gecknology for custom integrations and workflow automations."
-};
-
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: "",

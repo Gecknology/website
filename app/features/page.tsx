@@ -21,11 +21,6 @@ import {
 } from "@/components/ui/carousel";
 import LogoCarousel from "@/components/ui/LogoCarousel";
 
-export const metadata = {
-  title: "Features - Gecknology",
-  description: "Discover our custom integrations, workflow automations, and dedicated support services."
-};
-
 const features = [
   {
     icon: <Code2 className="w-14 h-14 text-primary mx-auto" />,
